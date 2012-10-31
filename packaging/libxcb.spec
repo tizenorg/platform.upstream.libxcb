@@ -1,5 +1,5 @@
 Name:           libxcb
-Version:        1.8.1
+Version:        1.9
 Release:        0
 License:        MIT
 Summary:        X11 core protocol C library
