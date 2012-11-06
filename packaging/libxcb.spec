@@ -499,4 +499,6 @@ make %{?_smp_mflags}
 %{_libdir}/pkgconfig/xcb*.pc
 %_docdir/%{name}
 
+%docs_package
+
 %changelog
