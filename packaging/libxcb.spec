@@ -12,7 +12,7 @@ Group:          Development/Libraries/C and C++
 Source:         %{name}-%{version}.tar.bz2
 
 BuildRequires:  pkgconfig
-BuildRequires:  python-base >= 2.6
+BuildRequires:  python >= 2.6
 BuildRequires:  python-xml
 BuildRequires:  xsltproc
 BuildRequires:  pkgconfig(check) >= 0.9.4
