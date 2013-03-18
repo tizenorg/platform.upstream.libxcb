@@ -4,13 +4,9 @@ Release:        0
 License:        MIT
 Summary:        X11 core protocol C library
 Url:            http://xcb.freedesktop.org/
-Group:          Development/Libraries/C and C++
+Group:          Graphics/X Window System
 
-#Git-Clone:	git://anongit.freedesktop.org/xorg/lib/libxcb
-#Git-Web:	http://cgit.freedesktop.org/xorg/lib/libxcb/
-#DL-URL:	http://xcb.freedesktop.org/dist/
 Source:         %{name}-%{version}.tar.bz2
-
 BuildRequires:  pkgconfig
 BuildRequires:  python >= 2.6
 BuildRequires:  python-xml
@@ -27,7 +23,7 @@ protocol, improved threading support, and extensibility.
 
 %package -n libxcb-composite
 Summary:        X11 Composite Extension C library
-Group:          System/Libraries
+Group:          Graphics/X Window System
 
 %description -n libxcb-composite
 The X protocol C-language Binding (XCB) is a replacement for Xlib
@@ -42,7 +38,7 @@ or merged by external programs, called compositing managers.
 
 %package -n libxcb-damage
 Summary:        X11 Damage Extension C library
-Group:          System/Libraries
+Group:          Graphics/X Window System
 
 %description -n libxcb-damage
 The X protocol C-language Binding (XCB) is a replacement for Xlib
@@ -54,7 +50,7 @@ of drawables.
 
 %package -n libxcb-dpms
 Summary:        X11 DPMS Extension C library
-Group:          System/Libraries
+Group:          Graphics/X Window System
 
 %description -n libxcb-dpms
 The X protocol C-language Binding (XCB) is a replacement for Xlib
@@ -63,7 +59,7 @@ protocol, improved threading support, and extensibility.
 
 %package -n libxcb-dri2
 Summary:        X11 DRI2 Extension C library
-Group:          System/Libraries
+Group:          Graphics/X Window System
 
 %description -n libxcb-dri2
 The X protocol C-language Binding (XCB) is a replacement for Xlib
@@ -72,7 +68,7 @@ protocol, improved threading support, and extensibility.
 
 %package -n libxcb-glx
 Summary:        X11 GLX Extension C library
-Group:          System/Libraries
+Group:          Graphics/X Window System
 
 %description -n libxcb-glx
 The X protocol C-language Binding (XCB) is a replacement for Xlib
@@ -81,7 +77,7 @@ protocol, improved threading support, and extensibility.
 
 %package -n libxcb-randr
 Summary:        X11 RandR Extension C library
-Group:          System/Libraries
+Group:          Graphics/X Window System
 
 %description -n libxcb-randr
 The X protocol C-language Binding (XCB) is a replacement for Xlib
@@ -94,7 +90,7 @@ orientation and layout of the root window of a screen.
 
 %package -n libxcb-record
 Summary:        X11 RECORD Extension C library
-Group:          System/Libraries
+Group:          Graphics/X Window System
 
 %description -n libxcb-record
 The X protocol C-language Binding (XCB) is a replacement for Xlib
@@ -106,7 +102,7 @@ X protocol and arbitrary X extension protocol.
 
 %package -n libxcb-render
 Summary:        X11 Render Extension C library
-Group:          System/Libraries
+Group:          Graphics/X Window System
 
 %description -n libxcb-render
 The X protocol C-language Binding (XCB) is a replacement for Xlib
@@ -115,7 +111,7 @@ protocol, improved threading support, and extensibility.
 
 %package -n libxcb-res
 Summary:        X11 Resource Extension C library
-Group:          System/Libraries
+Group:          Graphics/X Window System
 
 %description -n libxcb-res
 The X protocol C-language Binding (XCB) is a replacement for Xlib
@@ -124,7 +120,7 @@ protocol, improved threading support, and extensibility.
 
 %package -n libxcb-screensaver
 Summary:        X11 ScreenSaver Extension C library
-Group:          System/Libraries
+Group:          Graphics/X Window System
 
 %description -n libxcb-screensaver
 The X protocol C-language Binding (XCB) is a replacement for Xlib
@@ -139,7 +135,7 @@ to be displayed and to provide the graphics.
 
 %package -n libxcb-shape
 Summary:        X11 Shape Extension C library
-Group:          System/Libraries
+Group:          Graphics/X Window System
 
 %description -n libxcb-shape
 The X protocol C-language Binding (XCB) is a replacement for Xlib
@@ -150,7 +146,7 @@ protocol, improved threading support, and extensibility.
 
 %package -n libxcb-shm
 Summary:        X11 Shared Memory Extension C library
-Group:          System/Libraries
+Group:          Graphics/X Window System
 
 %description -n libxcb-shm
 The X protocol C-language Binding (XCB) is a replacement for Xlib
@@ -163,7 +159,7 @@ not need to be transferred over sockets.
 
 %package -n libxcb-sync
 Summary:        X11 Sync Extension C library
-Group:          System/Libraries
+Group:          Graphics/X Window System
 
 %description -n libxcb-sync
 The X protocol C-language Binding (XCB) is a replacement for Xlib
@@ -172,7 +168,7 @@ protocol, improved threading support, and extensibility.
 
 %package -n libxcb-xevie
 Summary:        X11 Xevie Extension C library
-Group:          System/Libraries
+Group:          Graphics/X Window System
 
 %description -n libxcb-xevie
 The X protocol C-language Binding (XCB) is a replacement for Xlib
@@ -186,7 +182,7 @@ events.
 
 %package -n libxcb-xf86dri
 Summary:        X11 XFree86-DRI Extension C library
-Group:          System/Libraries
+Group:          Graphics/X Window System
 
 %description -n libxcb-xf86dri
 The X protocol C-language Binding (XCB) is a replacement for Xlib
@@ -195,7 +191,7 @@ protocol, improved threading support, and extensibility.
 
 %package -n libxcb-xfixes
 Summary:        X11 Xfixes Extension C library
-Group:          System/Libraries
+Group:          Graphics/X Window System
 
 %description -n libxcb-xfixes
 The X protocol C-language Binding (XCB) is a replacement for Xlib
@@ -207,7 +203,7 @@ various limitations in the core protocol.
 
 %package -n libxcb-xinerama
 Summary:        X11 Xinerama Extension C library
-Group:          System/Libraries
+Group:          Graphics/X Window System
 
 %description -n libxcb-xinerama
 The X protocol C-language Binding (XCB) is a replacement for Xlib
@@ -220,7 +216,7 @@ physical displays as one large virtual display.
 
 %package -n libxcb-xprint
 Summary:        X11 XPrint Extension C library
-Group:          System/Libraries
+Group:          Graphics/X Window System
 
 %description -n libxcb-xprint
 The X protocol C-language Binding (XCB) is a replacement for Xlib
@@ -232,7 +228,7 @@ non-display devices.
 
 %package -n libxcb-xtest
 Summary:        X11 XTEST Extension C library
-Group:          System/Libraries
+Group:          Graphics/X Window System
 
 %description -n libxcb-xtest
 The X protocol C-language Binding (XCB) is a replacement for Xlib
@@ -246,7 +242,7 @@ playback of user actions.
 
 %package -n libxcb-xv
 Summary:        X11 video Extension C library
-Group:          System/Libraries
+Group:          Graphics/X Window System
 
 %description -n libxcb-xv
 The X protocol C-language Binding (XCB) is a replacement for Xlib
@@ -260,7 +256,7 @@ more ports through which independent video streams pass.
 
 %package -n libxcb-xvmc
 Summary:        X11 Video Motion Compensation Extension C library
-Group:          System/Libraries
+Group:          Graphics/X Window System
 
 %description -n libxcb-xvmc
 The X protocol C-language Binding (XCB) is a replacement for Xlib
@@ -274,7 +270,7 @@ video-hardware.
 
 %package devel
 Summary:        Development files for the X11 protocol C library
-Group:          Development/Libraries/C and C++
+Group:          Development/Libraries
 Requires:       libxcb-composite = %{version}
 Requires:       libxcb-damage = %{version}
 Requires:       libxcb-dpms = %{version}
