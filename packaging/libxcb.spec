@@ -401,90 +401,112 @@ make %{?_smp_mflags}
 %postun -n libxcb-xvmc -p /sbin/ldconfig
 
 %files -n libxcb
+%license COPYING
 %defattr(-,root,root)
 %{_libdir}/libxcb.so.1*
 
 %files -n libxcb-composite
+%license COPYING
 %defattr(-,root,root)
 %{_libdir}/libxcb-composite.so.0*
 
 %files -n libxcb-damage
+%license COPYING
 %defattr(-,root,root)
 %{_libdir}/libxcb-damage.so.0*
 
 %files -n libxcb-dpms
+%license COPYING
 %defattr(-,root,root)
 %{_libdir}/libxcb-dpms.so.0*
 
 %files -n libxcb-dri2
+%license COPYING
 %defattr(-,root,root)
 %{_libdir}/libxcb-dri2.so.0*
 
 %files -n libxcb-glx
+%license COPYING
 %defattr(-,root,root)
 %{_libdir}/libxcb-glx.so.0*
 
 %files -n libxcb-randr
+%license COPYING
 %defattr(-,root,root)
 %{_libdir}/libxcb-randr.so.0*
 
 %files -n libxcb-record
+%license COPYING
 %defattr(-,root,root)
 %{_libdir}/libxcb-record.so.0*
 
 %files -n libxcb-render
+%license COPYING
 %defattr(-,root,root)
 %{_libdir}/libxcb-render.so.0*
 
 %files -n libxcb-res
+%license COPYING
 %defattr(-,root,root)
 %{_libdir}/libxcb-res.so.0*
 
 %files -n libxcb-screensaver
+%license COPYING
 %defattr(-,root,root)
 %{_libdir}/libxcb-screensaver.so.0*
 
 %files -n libxcb-shape
+%license COPYING
 %defattr(-,root,root)
 %{_libdir}/libxcb-shape.so.0*
 
 %files -n libxcb-shm
+%license COPYING
 %defattr(-,root,root)
 %{_libdir}/libxcb-shm.so.0*
 
 %files -n libxcb-sync
+%license COPYING
 %defattr(-,root,root)
 %{_libdir}/libxcb-sync.so.0*
 
 %files -n libxcb-xevie
+%license COPYING
 %defattr(-,root,root)
 %{_libdir}/libxcb-xevie.so.0*
 
 %files -n libxcb-xf86dri
+%license COPYING
 %defattr(-,root,root)
 %{_libdir}/libxcb-xf86dri.so.*
 
 %files -n libxcb-xfixes
+%license COPYING
 %defattr(-,root,root)
 %{_libdir}/libxcb-xfixes.so.*
 
 %files -n libxcb-xinerama
+%license COPYING
 %defattr(-,root,root)
 %{_libdir}/libxcb-xinerama.so.0*
 
 %files -n libxcb-xprint
+%license COPYING
 %defattr(-,root,root)
 %{_libdir}/libxcb-xprint.so.0*
 
 %files -n libxcb-xtest
+%license COPYING
 %defattr(-,root,root)
 %{_libdir}/libxcb-xtest.so.0*
 
 %files -n libxcb-xv
+%license COPYING
 %defattr(-,root,root)
 %{_libdir}/libxcb-xv.so.0*
 
 %files -n libxcb-xvmc
+%license COPYING
 %defattr(-,root,root)
 %{_libdir}/libxcb-xvmc.so.0*
 

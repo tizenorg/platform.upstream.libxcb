@@ -1,3 +1,6 @@
+* Sat May 11 2013 Anas Nashif <anas.nashif@intel.com> submit/tizen/20130509.181430@01de1f1
+- Set license using %license
+
 * Sun Mar 17 2013 Anas Nashif <anas.nashif@intel.com> upstream/1.9@bdd221e
 - Update package groups
 
