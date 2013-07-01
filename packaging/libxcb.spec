@@ -7,6 +7,7 @@ Url:            http://xcb.freedesktop.org/
 Group:          Graphics/X Window System
 
 Source:         %{name}-%{version}.tar.bz2
+Source1001: 	libxcb.manifest
 BuildRequires:  pkgconfig
 BuildRequires:  python >= 2.6
 BuildRequires:  python-xml
@@ -303,6 +304,7 @@ in %lname.
 
 %prep
 %setup -q
+cp %{SOURCE1001} .
 
 %build
 %autogen
@@ -401,116 +403,139 @@ make %{?_smp_mflags}
 %postun -n libxcb-xvmc -p /sbin/ldconfig
 
 %files -n libxcb
+%manifest %{name}.manifest
 %license COPYING
 %defattr(-,root,root)
 %{_libdir}/libxcb.so.1*
 
 %files -n libxcb-composite
+%manifest %{name}.manifest
 %license COPYING
 %defattr(-,root,root)
 %{_libdir}/libxcb-composite.so.0*
 
 %files -n libxcb-damage
+%manifest %{name}.manifest
 %license COPYING
 %defattr(-,root,root)
 %{_libdir}/libxcb-damage.so.0*
 
 %files -n libxcb-dpms
+%manifest %{name}.manifest
 %license COPYING
 %defattr(-,root,root)
 %{_libdir}/libxcb-dpms.so.0*
 
 %files -n libxcb-dri2
+%manifest %{name}.manifest
 %license COPYING
 %defattr(-,root,root)
 %{_libdir}/libxcb-dri2.so.0*
 
 %files -n libxcb-glx
+%manifest %{name}.manifest
 %license COPYING
 %defattr(-,root,root)
 %{_libdir}/libxcb-glx.so.0*
 
 %files -n libxcb-randr
+%manifest %{name}.manifest
 %license COPYING
 %defattr(-,root,root)
 %{_libdir}/libxcb-randr.so.0*
 
 %files -n libxcb-record
+%manifest %{name}.manifest
 %license COPYING
 %defattr(-,root,root)
 %{_libdir}/libxcb-record.so.0*
 
 %files -n libxcb-render
+%manifest %{name}.manifest
 %license COPYING
 %defattr(-,root,root)
 %{_libdir}/libxcb-render.so.0*
 
 %files -n libxcb-res
+%manifest %{name}.manifest
 %license COPYING
 %defattr(-,root,root)
 %{_libdir}/libxcb-res.so.0*
 
 %files -n libxcb-screensaver
+%manifest %{name}.manifest
 %license COPYING
 %defattr(-,root,root)
 %{_libdir}/libxcb-screensaver.so.0*
 
 %files -n libxcb-shape
+%manifest %{name}.manifest
 %license COPYING
 %defattr(-,root,root)
 %{_libdir}/libxcb-shape.so.0*
 
 %files -n libxcb-shm
+%manifest %{name}.manifest
 %license COPYING
 %defattr(-,root,root)
 %{_libdir}/libxcb-shm.so.0*
 
 %files -n libxcb-sync
+%manifest %{name}.manifest
 %license COPYING
 %defattr(-,root,root)
 %{_libdir}/libxcb-sync.so.0*
 
 %files -n libxcb-xevie
+%manifest %{name}.manifest
 %license COPYING
 %defattr(-,root,root)
 %{_libdir}/libxcb-xevie.so.0*
 
 %files -n libxcb-xf86dri
+%manifest %{name}.manifest
 %license COPYING
 %defattr(-,root,root)
 %{_libdir}/libxcb-xf86dri.so.*
 
 %files -n libxcb-xfixes
+%manifest %{name}.manifest
 %license COPYING
 %defattr(-,root,root)
 %{_libdir}/libxcb-xfixes.so.*
 
 %files -n libxcb-xinerama
+%manifest %{name}.manifest
 %license COPYING
 %defattr(-,root,root)
 %{_libdir}/libxcb-xinerama.so.0*
 
 %files -n libxcb-xprint
+%manifest %{name}.manifest
 %license COPYING
 %defattr(-,root,root)
 %{_libdir}/libxcb-xprint.so.0*
 
 %files -n libxcb-xtest
+%manifest %{name}.manifest
 %license COPYING
 %defattr(-,root,root)
 %{_libdir}/libxcb-xtest.so.0*
 
 %files -n libxcb-xv
+%manifest %{name}.manifest
 %license COPYING
 %defattr(-,root,root)
 %{_libdir}/libxcb-xv.so.0*
 
 %files -n libxcb-xvmc
+%manifest %{name}.manifest
 %license COPYING
 %defattr(-,root,root)
 %{_libdir}/libxcb-xvmc.so.0*
 
 %files devel
+%manifest %{name}.manifest
 %defattr(-,root,root)
 %{_includedir}/xcb
 %{_libdir}/libxcb*.so
