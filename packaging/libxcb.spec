@@ -1,3 +1,5 @@
+%bcond_with x
+
 Name:           libxcb
 Version:        1.9
 Release:        0
@@ -16,6 +18,10 @@ BuildRequires:  pkgconfig(check) >= 0.9.4
 BuildRequires:  pkgconfig(pthread-stubs)
 BuildRequires:  pkgconfig(xau) >= 0.99.2
 BuildRequires:  pkgconfig(xcb-proto) >= 1.7
+
+%if !%{with x}
+ExclusiveArch:
+%endif
 
 %description
 The X protocol C-language Binding (XCB) is a replacement for Xlib
