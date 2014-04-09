@@ -1,7 +1,7 @@
 %bcond_with x
 
 Name:           libxcb
-Version:        1.9
+Version:        1.10
 Release:        0
 License:        MIT
 Summary:        X11 core protocol C library
@@ -18,6 +18,7 @@ BuildRequires:  pkgconfig(check) >= 0.9.4
 BuildRequires:  pkgconfig(pthread-stubs)
 BuildRequires:  pkgconfig(xau) >= 0.99.2
 BuildRequires:  pkgconfig(xcb-proto) >= 1.7
+BuildRequires:  pkgconfig(xorg-macros)
 
 %if !%{with x}
 ExclusiveArch:
@@ -254,6 +255,30 @@ extension (Xv) for the X Window System. The XvMC API allows video
 programs to offload portions of the video decoding process to the GPU
 video-hardware.
 
+%package -n libxcb-dri3
+Summary:         X11 DRI3 Extension C librar
+
+%description -n libxcb-dri3
+The X protocol C-language Binding (XCB) is a replacement for Xlib
+featuring a small footprint, latency hiding, direct access to the
+protocol, improved threading support, and extensibility.
+
+%package -n libxcb-present
+Summary:        X11 Present Extension C librar
+
+%description -n libxcb-present
+The X protocol C-language Binding (XCB) is a replacement for Xlib
+featuring a small footprint, latency hiding, direct access to the
+protocol, improved threading support, and extensibility.
+
+%package -n libxcb-xkb
+Summary:        X11 XKEYBOARD Extension C librar
+
+%description -n libxcb-xkb
+The X protocol C-language Binding (XCB) is a replacement for Xlib
+featuring a small footprint, latency hiding, direct access to the
+protocol, improved threading support, and extensibility.
+
 %package devel
 Summary:        Development files for the X11 protocol C library
 Requires:       libxcb-composite = %{version}
@@ -277,7 +302,9 @@ Requires:       libxcb-xprint = %{version}
 Requires:       libxcb-xtest = %{version}
 Requires:       libxcb-xv = %{version}
 Requires:       libxcb-xvmc = %{version}
-
+Requires:       libxcb-dri3 = %{version}
+Requires:       libxcb-present = %{version}
+Requires:       libxcb-xkb = %{version}
 %description devel
 The X protocol C-language Binding (XCB) is a replacement for Xlib
 featuring a small footprint, latency hiding, direct access to the
@@ -291,8 +318,7 @@ in %lname.
 cp %{SOURCE1001} .
 
 %build
-%autogen
-%configure --docdir=%_docdir/%{name} --disable-static
+%autogen --docdir=%_docdir/%{name} --disable-static
 make %{?_smp_mflags}
 
 %install
@@ -386,6 +412,18 @@ make %{?_smp_mflags}
 
 %postun -n libxcb-xvmc -p /sbin/ldconfig
 
+%post   -n libxcb-dri3 -p /sbin/ldconfig
+
+%postun -n libxcb-dri3 -p /sbin/ldconfig
+
+%post   -n libxcb-present -p /sbin/ldconfig
+
+%postun -n libxcb-present -p /sbin/ldconfig
+
+%post   -n libxcb-xkb -p /sbin/ldconfig
+
+%postun -n libxcb-xkb -p /sbin/ldconfig
+
 %files -n libxcb
 %manifest %{name}.manifest
 %license COPYING
@@ -468,7 +506,7 @@ make %{?_smp_mflags}
 %manifest %{name}.manifest
 %license COPYING
 %defattr(-,root,root)
-%{_libdir}/libxcb-sync.so.0*
+%{_libdir}/libxcb-sync.so.1*
 
 %files -n libxcb-xevie
 %manifest %{name}.manifest
@@ -517,6 +555,24 @@ make %{?_smp_mflags}
 %license COPYING
 %defattr(-,root,root)
 %{_libdir}/libxcb-xvmc.so.0*
+
+%files -n libxcb-dri3
+%manifest %{name}.manifest
+%license COPYING
+%defattr(-,root,root)
+%{_libdir}/libxcb-dri3.so.0*
+
+%files -n libxcb-xkb
+%manifest %{name}.manifest
+%license COPYING
+%defattr(-,root,root)
+%{_libdir}/libxcb-xkb.so.1*
+
+%files -n libxcb-present
+%manifest %{name}.manifest
+%license COPYING
+%defattr(-,root,root)
+%{_libdir}/libxcb-present.so.0*
 
 %files devel
 %manifest %{name}.manifest
